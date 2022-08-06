@@ -11,7 +11,7 @@ import Header from './components/Header.vue';
     components: { Header }
 }
 </script>
-<style>
+<style scoped>
 @font-face {
   font-family: "Yekan";
   src: local("Yekan"),

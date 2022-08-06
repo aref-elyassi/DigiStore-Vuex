@@ -1,20 +1,27 @@
 <template>
-    <div class="container-fluid">
-        <div class="row">
-            <header>
-                <nav>
-                    <ul class="right-list">
-                        <li>خانه</li>
-                        <li>قوانین</li>
-                        <li>درباره ما</li>
-                        <li>محصولات</li>
-                    </ul>
-                    <ul class="left-list">
-                        <li>ورود/ثبت نام</li>
-                    </ul>
-                </nav>
-            </header>
-        </div>
+    <div>
+            <nav>
+                <ul class="right-list">
+                    <li>
+                        <router-link class="router" to="/">خانه</router-link>
+                        </li>
+                    <li>
+                        <router-link to="/"  class="router">قوانین</router-link>
+
+                    </li>
+                    <li>
+                        <router-link to="/" class="router">درباره ما</router-link>
+                    </li>
+                    <li>
+                        <router-link to="/" class="router">محصولات</router-link>
+                    </li>
+                </ul>
+                <ul class="left-list">
+                    <li>
+                          <router-link to="/" class="router">ورود/ثبت نام</router-link>
+                    </li>
+                </ul>
+            </nav>
     </div>
 </template>
 
@@ -26,15 +33,12 @@
 
 <style  scoped>
 
-header{
-    
-    height: auto;
-   
-}
+
 nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
+  
 }
 ul{
     display: flex;
@@ -53,5 +57,13 @@ li{
 }
 .left-list li{
  margin-left: 15px;
+}
+.router{
+    text-decoration: none;
+    color: #000;
+}
+.router:hover{
+    text-decoration: underline;
+    color: red;
 }
 </style>
