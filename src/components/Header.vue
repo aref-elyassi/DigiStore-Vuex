@@ -1,5 +1,9 @@
 <template>
     <div>
+        <div class="text-head">
+            <img :src="require('@/assets/img/image2.png')" alt="">
+            </div>
+
             <nav>
                 <ul class="right-list">
                     <li>
@@ -15,15 +19,17 @@
                     <li>
                         <router-link to="/" class="router">محصولات</router-link>
                     </li>
+                    <li>
+                        <router-link to="/" class="router">ورود/ثبت نام</router-link>
+                    </li>
                 </ul>
+              
                 <ul class="left-list">
                     <li>
-                          <router-link to="/" class="router">ورود/ثبت نام</router-link>
-                    </li>
-                    <li>
-                        <router-link to="/">سبد خرید شما</router-link>
-                          <span class="badge rounded-pill bg-primary me-1">1</span>
-                          <i class="bi bi-basket-fill" style="font-size:23px"></i>
+                        <router-link to="/" class="router">
+                            <span>سبدخرید</span>
+                          <span class="badge rounded-pill bg-dark me-1">1</span>
+                        </router-link>
                     </li>
                 </ul>
             </nav>
@@ -37,12 +43,28 @@
 </script>
 
 <style  scoped>
+img{
+    width: 20rem;
+    height: 10rem;
+    transition: 2s transform;
+   
+}
+img:hover{
+    transform: scale(1.1);
 
-
+}
+.text-head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+    flex-direction: column;
+}
 nav{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    margin-top: 1rem;
   
 }
 ul{
@@ -63,12 +85,16 @@ li{
 .left-list li{
  margin-left: 15px;
 }
+.main-list{
+    font-size: xx-large;
+    font-weight: 600;
+}
 .router{
     text-decoration: none;
-    color: #000;
+    color: rgb(0, 0, 0);
 }
 .router:hover{
-    text-decoration: underline;
-    color: red;
+  
+    color: rgb(238, 32, 32);
 }
 </style>
