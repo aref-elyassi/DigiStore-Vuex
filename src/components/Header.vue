@@ -20,6 +20,11 @@
                     <li>
                           <router-link to="/" class="router">ورود/ثبت نام</router-link>
                     </li>
+                    <li>
+                        <router-link to="/">سبد خرید شما</router-link>
+                          <span class="badge rounded-pill bg-primary me-1">1</span>
+                          <i class="bi bi-basket-fill" style="font-size:23px"></i>
+                    </li>
                 </ul>
             </nav>
     </div>
