@@ -8,7 +8,7 @@
             </p>         
     </div>
     <div class="address">
-        <h3>آدرس ما:</h3>
+        <h3>آدرس ما</h3>
         <p>تهران خیابان انقلاب کوچه سوم پلاک۱۰</p>
     </div>
 </div>
@@ -30,9 +30,9 @@ justify-content: center;
 flex-direction: column;
 }
 .about>h1{
-    border-bottom: 2px solid rgb(255, 255, 255);
+    border-bottom: 2px solid rgb(5, 5, 5);
     margin-top: 10px;
-    color: #fff;
+    color: rgb(0, 0, 0);
 }
 .about>p{
     text-align: justify;
@@ -41,7 +41,7 @@ flex-direction: column;
     border: 1px solid #000;
     border-radius: 5px;
     padding: 20px;
-    color: #fff;
+    color: rgb(0, 0, 0);
    
 }
 .content{
@@ -53,6 +53,6 @@ flex-direction: column;
     align-items: center;
     justify-content: start;
     flex-direction: column;
-    color: #fff;
+    color: rgb(0, 0, 0);
 }
 </style>

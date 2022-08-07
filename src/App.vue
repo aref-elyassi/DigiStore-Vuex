@@ -24,7 +24,7 @@ import Header from './components/Header.vue';
   direction: rtl;
 }
 .router{
-  background: #78a6c8;
+ 
   margin-top: 0.5rem;
 }
 

@@ -62,4 +62,8 @@
   height: 20rem;
   object-fit: contain;
 }
+.carousel{
+  border-bottom: 2px solid #000;
+   background: #78a6c8;
+}
 </style>
