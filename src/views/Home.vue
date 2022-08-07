@@ -1,6 +1,5 @@
 <template>
-    <div>
-       
+    <div>       
     <Carousel/>
     </div>
 </template>
@@ -13,6 +12,6 @@ import Carousel from '@/components/Carousel.vue';
 }
 </script>
 
-<style lang="scss" scoped>
+<style  scoped>
 
 </style>

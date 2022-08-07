@@ -23,7 +23,7 @@ import Header from './components/Header.vue';
   direction: rtl;
 }
 .router{
-  background: #c9d8b9;
+  background: #c9c9c9;
 }
 
 </style>

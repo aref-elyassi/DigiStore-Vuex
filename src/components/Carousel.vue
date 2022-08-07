@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="carousel">
 <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -8,24 +8,24 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active" data-bs-interval="10000">
-      <img :src="require('@/assets/img/image2.png')" class="d-block w-100" alt="...">
+      <img :src="require('@/assets/img/S22.png')" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5>First slide label</h5>
-        <p>Some representative placeholder content for the first slide.</p>
+       
+        <h3>به روزترین گوشی های دنیا را از ما خرید کنید</h3>
       </div>
     </div>
     <div class="carousel-item" data-bs-interval="2000">
-      <img :src="require('@/assets/img/image2.png')" class="d-block w-100" alt="...">
+      <img :src="require('@/assets/img/Xiaomi.png')" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Some representative placeholder content for the second slide.</p>
+        
+        <h3>بهترین کیفیت ها را با ما تجربه کنید</h3>
       </div>
     </div>
     <div class="carousel-item">
-      <img :src="require('@/assets/img/image2.png')" class="d-block w-100" alt="...">
+      <img :src="require('@/assets/img/a52s.png')" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>Some representative placeholder content for the third slide.</p>
+      
+         <h3>به روزترین گوشی های دنیا را از ما خرید کنید</h3>
       </div>
     </div>
   </div>
@@ -48,8 +48,20 @@
 </script>
 
 <style  scoped>
-img{
-   
-    height: 25rem;
+.carousel-caption>h3 ,.carousel-caption>p{
+  color:#000
+}
+.carousel{
+  margin-top: 2rem;
+}
+.carousel-item{
+  width: 100%;
+  height: 25rem;
+ 
+}
+.carousel-item img{
+  width: 30rem;
+  height: 20rem;
+  object-fit: contain;
 }
 </style>
