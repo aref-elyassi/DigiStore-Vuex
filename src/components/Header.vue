@@ -28,7 +28,7 @@
                     <li>
                         <router-link to="/" class="router">
                             <span>سبدخرید</span>
-                          <span class="badge rounded-pill bg-dark me-1">1</span>
+                          <span class="badge rounded-pill bg-light me-1">1</span>
                         </router-link>
                     </li>
                 </ul>
@@ -43,6 +43,9 @@
 </script>
 
 <style  scoped>
+.badge{
+    color: #000;
+}
 img{
     width: 20rem;
     height: 10rem;
@@ -60,7 +63,7 @@ img:hover{
     flex-direction: column;
 }
 nav{
-    background: #f6a1ff;
+    background: #e65c4f;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -91,7 +94,7 @@ li{
 }
 .router{
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: #fff
 }
 .router:hover{
   

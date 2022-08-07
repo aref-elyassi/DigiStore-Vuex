@@ -49,9 +49,10 @@ justify-content:center;
 }
 .form>Form>button{
     margin-top:2rem;
-     background:#42a7f5;
+     background:#326789;
      border:1px solid #1069ae;
-     border-radius:5px
+     border-radius:5px;
+     color: #fff;
 }
 .form>Form>input{
     width:25rem;
@@ -61,12 +62,13 @@ justify-content:center;
     border-top:2px solid #42a7f5
 }
 .form>Form>input:focus{
- background:#42a7f5;
+ background:#326789;
+ color: #fff;
 
 }
 .router{
     text-decoration:none;
-    color:#000;
+    color:#fff;
      margin-top:10px
 }
 .router:hover{

@@ -52,21 +52,23 @@ margin-top:2rem
 }
 .form>Form>button{
     margin-top:2rem;
-     background:#42a7f5;
+     background:#326789;
       border:1px solid #1069ae;
-     border-radius:5px
+     border-radius:5px;
+     color: #fff;
 }
 .form>Form>input{
     width:20rem;
     transition:.8s ease-in-out width;
       border:none;
       border-radius: 5px;
-    border-top:2px solid #42a7f5;
+    border-top:2px solid #326789;
        
 
 }
 .form>Form>input:focus{
- background:#42a7f5;
+ background:#326789;
+ color: #fff;
 
 }
 .router{

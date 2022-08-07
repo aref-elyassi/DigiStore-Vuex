@@ -30,8 +30,9 @@ justify-content: center;
 flex-direction: column;
 }
 .about>h1{
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid rgb(255, 255, 255);
     margin-top: 10px;
+    color: #fff;
 }
 .about>p{
     text-align: justify;
@@ -40,6 +41,7 @@ flex-direction: column;
     border: 1px solid #000;
     border-radius: 5px;
     padding: 20px;
+    color: #fff;
    
 }
 .content{
@@ -51,5 +53,6 @@ flex-direction: column;
     align-items: center;
     justify-content: start;
     flex-direction: column;
+    color: #fff;
 }
 </style>
