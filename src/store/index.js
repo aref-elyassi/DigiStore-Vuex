@@ -129,6 +129,9 @@ export default createStore({
 
   },
   getters: {
+    allProduct(state){
+      return state.Products
+    }
   },
   mutations: {
   },

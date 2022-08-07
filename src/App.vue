@@ -1,7 +1,8 @@
 <template>
  <div class="app">
   <Header/>
-   <router-view class="router"/>
+   
+   <router-view class="router"></router-view>
  </div>
 </template>
 <script>
@@ -23,7 +24,7 @@ import Header from './components/Header.vue';
   direction: rtl;
 }
 .router{
-  background: #c9c9c9;
+  background: #f2d0ff;
 }
 
 </style>

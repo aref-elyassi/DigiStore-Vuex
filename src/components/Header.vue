@@ -14,13 +14,13 @@
 
                     </li>
                     <li>
-                        <router-link to="/" class="router">درباره ما</router-link>
+                        <router-link to="/about" class="router">درباره ما</router-link>
                     </li>
                     <li>
                         <router-link to="/" class="router">محصولات</router-link>
                     </li>
                     <li>
-                        <router-link to="/" class="router">ورود/ثبت نام</router-link>
+                        <router-link to="/login" class="router">ورود/ثبت نام</router-link>
                     </li>
                 </ul>
               
@@ -57,10 +57,10 @@ img:hover{
     display: flex;
     align-items: center;
     justify-content: center;
- 
     flex-direction: column;
 }
 nav{
+    background: #f6a1ff;
     display: flex;
     justify-content: center;
     align-items: center;

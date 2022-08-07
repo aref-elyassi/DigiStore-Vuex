@@ -51,9 +51,7 @@
 .carousel-caption>h3 ,.carousel-caption>p{
   color:#000
 }
-.carousel{
-  margin-top: 2rem;
-}
+
 .carousel-item{
   width: 100%;
   height: 25rem;
