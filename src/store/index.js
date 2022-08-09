@@ -115,7 +115,22 @@ export default createStore({
           ]
       }
   ],
-
+  productss:[
+    {
+        id:8,
+        name:'لباسشویی ال جی',
+        price:15000000,
+        image:'lgwash.png',
+        description:'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.',                  
+    },
+    {
+        id:9,
+        name:'لباسشویی سامسونگ',
+        price:20000000,
+        image:'samsunglebas.png',
+        description:'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.',                  
+    },
+]
   },
   getters: {
     allProducts(state){

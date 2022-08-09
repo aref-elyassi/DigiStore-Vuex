@@ -17,7 +17,7 @@
                         <router-link to="/about" class="router">درباره ما</router-link>
                     </li>
                     <li>
-                        <router-link to="/allproduct" class="router">محصولات</router-link>
+                        <router-link to="/products" class="router">محصولات</router-link>
                     </li>
                     <li>
                         <router-link to="/login" class="router">ورود/ثبت نام</router-link>

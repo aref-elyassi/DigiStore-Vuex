@@ -5,7 +5,8 @@
     <p>{{productsDetail.description}}</p>
     <p>قیمت:{{productsDetail.price}}تومان</p>
    <div class="button">
-    <button class="btn btn-info" :to="`/${productsDetail.id}`">نمایش جزئیات محصول</button>
+    
+       <router-link class="btn btn-info" :to="{name:'productId',params:{id:productsDetail.id}}">نمایش جزئیات محصول</router-link>
        <button class="btn btn-primary">اضافه کردن به سبد خرید</button>
    </div>
   </div>
