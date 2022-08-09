@@ -5,7 +5,7 @@
     <p>{{productsDetail.description}}</p>
     <p>قیمت:{{productsDetail.price}}تومان</p>
    <div class="button">
-    <button class="btn btn-info">نمایش جزئیات محصول</button>
+    <button class="btn btn-info" :to="`/${productsDetail.id}`">نمایش جزئیات محصول</button>
        <button class="btn btn-primary">اضافه کردن به سبد خرید</button>
    </div>
   </div>

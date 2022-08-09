@@ -121,6 +121,9 @@ export default createStore({
     allProducts(state){
       return state.Products
     },
+   getProductsById(state,id){
+    return state.Products.product.find(pr=>pr.id==id)
+   }
   
   },
   mutations: {

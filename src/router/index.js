@@ -10,7 +10,8 @@ const routes = [
  {path:'/login',name:'login',component:Login},
  {path:'/signUp',name:'signUp',component:SignUp},
  {path:'/about',name:'about',component:AboutUs},
- {path:'/allproduct',name:'allproduct',component:AllProduct}
+ {path:'/allproduct',name:'allproduct',component:AllProduct},
+
 ]
 
 const router = createRouter({

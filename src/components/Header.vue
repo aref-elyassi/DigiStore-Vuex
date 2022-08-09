@@ -98,6 +98,6 @@ li{
 }
 .router:hover{
   
-    color: rgb(238, 32, 32);
+    color: rgb(54, 54, 54);
 }
 </style>
