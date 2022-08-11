@@ -33,8 +33,6 @@ import SmallCard from '@/components/SmallCard.vue'
 <style  scoped>
 .smallcards{
 display: flex;
-
-
 }
 
 .myProduct{
@@ -42,6 +40,5 @@ display: flex;
     align-items: center;
     justify-content: space-evenly  ;
     flex-direction: column;
-   
 }
 </style>

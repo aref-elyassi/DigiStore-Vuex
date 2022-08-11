@@ -23,11 +23,13 @@
 
 <style  scoped>
 .about{
-width: 100%;
+width: 80%;
 display: flex;
 align-items: center;
 justify-content: center;
 flex-direction: column;
+border: 1px solid #000;
+    border-radius: 5px;
 }
 .about>h1{
     border-bottom: 2px solid rgb(5, 5, 5);
@@ -36,16 +38,19 @@ flex-direction: column;
 }
 .about>p{
     text-align: justify;
-    width: 80%;
+   
     padding: 10px;
-    border: 1px solid #000;
-    border-radius: 5px;
+    
     padding: 20px;
     color: rgb(0, 0, 0);
    
 }
 .content{
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 .address{
     width: 100%;

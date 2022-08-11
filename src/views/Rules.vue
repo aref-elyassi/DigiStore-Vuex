@@ -32,7 +32,7 @@ import Question from '@/components/Question.vue';
     
 }
 .text{
-    width: 70%;
+    width: 80%;
     border: 1px solid #000;
     border-radius: 5px;
     display: flex;
