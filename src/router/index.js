@@ -6,6 +6,7 @@ import AboutUs from '@/views/AboutUs.vue'
 import AllProduct from '@/views/AllProduct.vue'
 import TemplateProduct from '@/views/TemplateProduct.vue'
 import ShowProduct from '@/views/ShowProduct.vue'
+import Rules from '@/views/Rules.vue'
 
 
 const routes = [
@@ -17,7 +18,8 @@ const routes = [
  {path:'/products',name:'templateproducts',component:TemplateProduct,children:[
   {path:'',name:'product',component:AllProduct},
   {path:':id',name:'productId',component:ShowProduct}
- ]}
+ ]},
+ {path:'/rules',name:'rules',component:Rules}
 
 
 ]

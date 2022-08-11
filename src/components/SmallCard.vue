@@ -1,11 +1,8 @@
 <template>
   <div class="smallcard">
     <img :src="require(`@/assets/img/${products.image}`)" alt="">
-    <h3>{{products.name}}</h3>
-    <p>{{products.description}}</p>
-    <p>قیمت:{{products.price}}تومان</p>
-   <div class="button">
-    
+    <h5>{{products.name}}</h5>
+   <div class="button">   
        <router-link class="btn btn-info" :to="{name:'productId',params:{id:products.id}}">نمایش جزئیات محصول</router-link>
        <button class="btn btn-primary">اضافه کردن به سبد خرید</button>
    </div>
@@ -24,12 +21,17 @@
 </script>
 
 <style scoped>
-
+.btn{
+    margin-top:15px; 
+    
+}
 .button{
     margin-bottom: 10px;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    flex-direction: column;
+
     width: 100%;
 }
 .smallcard{

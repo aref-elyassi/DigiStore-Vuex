@@ -1,6 +1,6 @@
 <template>
     <div>
-            {{product.name}}
+            <CardView :products="product"/>
     </div>
 </template>
 
@@ -11,20 +11,20 @@
 import { computed } from '@vue/reactivity';
 import { useRoute } from 'vue-router';
 import { useStore } from 'vuex';
-import { ref } from 'vue';
+
+import CardView from '@/components/CardView.vue';
 
 
     export default {
     setup() {
-        let product = ref({})
+      
         const store = useStore();
         const router = useRoute();
-         product = computed(() => store.getters.getProductById(router.params.id));
-         console.log(product);
+       const product = computed(() => store.getters.getProductById(router.params.id));
         console.log(router.params.id);
         return { product };
     },
-   
+    components: { CardView }
 }
  
 

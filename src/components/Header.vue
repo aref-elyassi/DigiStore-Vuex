@@ -10,7 +10,7 @@
                         <router-link class="router" to="/">خانه</router-link>
                         </li>
                     <li>
-                        <router-link to="/"  class="router">قوانین</router-link>
+                        <router-link to="/rules"  class="router">قوانین</router-link>
 
                     </li>
                     <li>
