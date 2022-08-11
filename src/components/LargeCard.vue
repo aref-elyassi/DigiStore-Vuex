@@ -5,7 +5,7 @@
         <h1>{{pr.title}}</h1>
         <div class="smallcards">
             <div  v-for="p in pr.product" :key="p.id">        
-                <SmallCard :productsDetail="p"/>
+                <SmallCard :products="p"/>
             </div>
         </div>
     </div>

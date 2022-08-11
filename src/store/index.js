@@ -9,21 +9,21 @@ export default createStore({
           product:[
   
               {
-                  id:1,
+                  id:11,
                   name:'Samsung Galaxy S22',
                   price:40000000,
                   image:'S22.png',
                   description:'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.',                  
               },
               {
-                  id:2,
+                  id:12,
                   name:'Samsung Galaxy S21',
                   price:20000000,
                   image:'samsungs21.png',
                   description:'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.',                  
               },
               {
-                  id:3,
+                  id:13,
                   name:'Samsung Galaxy A52S',
                   price:12000000,
                   image:'a52s.png',
@@ -37,14 +37,14 @@ export default createStore({
           title:'ساعت های هوشمند',
           product:[
               {
-                  id:1,
+                  id:21,
                   name:'ساعت هوشمند شیائومی',
                   price:1000000,
                   image:'Xiaomi.png',
                   description:'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.',                  
               },
               {
-                  id:2,
+                  id:22,
                   name:'ساعت هوشمند سامسونگ',
                   price:10000000,
                   image:'Samsung-watch.png',
@@ -58,14 +58,14 @@ export default createStore({
           title:'یخچال های ساید بای ساید',
           product:[
               {
-                  id:1,
+                  id:31,
                   name:' یخچال ساید بای ساید ال جی',
                   price:100000000,
                   image:'lg-side.png',
                   description:'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.',                  
               },
               {
-                  id:2,
+                  id:32,
                   name:'یخچال ساید بای ساید سامسونگ',
                   price:120000000,
                   image:'Samsung-side.png',
@@ -79,14 +79,14 @@ export default createStore({
           title:'تلویزیون',
           product:[
               {
-                  id:1,
+                  id:41,
                   name:'تلویزیون ال ای دی سامسونگ',
                   price:50000000,
                   image:'samsungtv.png',
                   description:'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.',                   
               },
               {
-                  id:2,
+                  id:42,
                   name:'تلویزیون ال جی',
                   price:60000000,
                   image:'lgtv.png',
@@ -99,14 +99,14 @@ export default createStore({
           title:'لباسشویی',
           product:[
               {
-                  id:8,
+                  id:51,
                   name:'لباسشویی ال جی',
                   price:15000000,
                   image:'lgwash.png',
                   description:'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.',                  
               },
               {
-                  id:9,
+                  id:52,
                   name:'لباسشویی سامسونگ',
                   price:20000000,
                   image:'samsunglebas.png',
@@ -115,16 +115,79 @@ export default createStore({
           ]
       }
   ],
-  productss:[
+  products:[
     {
-        id:8,
+        id:11,
+        name:'Samsung Galaxy S22',
+        price:40000000,
+        image:'S22.png',
+        description:'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.',                  
+    },
+    {
+        id:12,
+        name:'Samsung Galaxy S21',
+        price:20000000,
+        image:'samsungs21.png',
+        description:'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.',                  
+    },
+    {
+        id:13,
+        name:'Samsung Galaxy A52S',
+        price:12000000,
+        image:'a52s.png',
+        description:'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.',                  
+    },
+    {
+        id:21,
+        name:'ساعت هوشمند شیائومی',
+        price:1000000,
+        image:'Xiaomi.png',
+        description:'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.',                  
+    },
+    {
+        id:22,
+        name:'ساعت هوشمند سامسونگ',
+        price:10000000,
+        image:'Samsung-watch.png',
+        description:'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.',                  
+    },
+    {
+        id:31,
+        name:' یخچال ساید بای ساید ال جی',
+        price:100000000,
+        image:'lg-side.png',
+        description:'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.',                  
+    },
+    {
+        id:32,
+        name:'یخچال ساید بای ساید سامسونگ',
+        price:120000000,
+        image:'Samsung-side.png',
+        description:'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.',                  
+    },
+    {
+        id:41,
+        name:'تلویزیون ال ای دی سامسونگ',
+        price:50000000,
+        image:'samsungtv.png',
+        description:'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.',                   
+    },
+    {
+        id:42,
+        name:'تلویزیون ال جی',
+        price:60000000,
+        image:'lgtv.png',
+        description:'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.',                  
+    },
+    {
+        id:51,
         name:'لباسشویی ال جی',
         price:15000000,
         image:'lgwash.png',
         description:'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.',                  
     },
     {
-        id:9,
+        id:52,
         name:'لباسشویی سامسونگ',
         price:20000000,
         image:'samsunglebas.png',
@@ -136,9 +199,9 @@ export default createStore({
     allProducts(state){
       return state.Products
     },
-   getProductsById(state,id){
-    return state.Products.product.find(pr=>pr.id==id)
-   }
+    getProductById: (state) => (id) => {
+        return state.products.find(pr => pr.id === id)
+    } 
   
   },
   mutations: {

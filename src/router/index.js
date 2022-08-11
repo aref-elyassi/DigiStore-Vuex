@@ -15,7 +15,7 @@ const routes = [
  {path:'/about',name:'about',component:AboutUs},
 
  {path:'/products',name:'templateproducts',component:TemplateProduct,children:[
-  {path:'',name:'products',component:AllProduct},
+  {path:'',name:'product',component:AllProduct},
   {path:':id',name:'productId',component:ShowProduct}
  ]}
 

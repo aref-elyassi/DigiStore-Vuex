@@ -1,37 +1,21 @@
 <template>
-  <div class="smallcard">
+     <div class="smallcard">
     <img :src="require(`@/assets/img/${products.image}`)" alt="">
     <h3>{{products.name}}</h3>
     <p>{{products.description}}</p>
     <p>قیمت:{{products.price}}تومان</p>
-   <div class="button">
-    
-       <router-link class="btn btn-info" :to="{name:'productId',params:{id:products.id}}">نمایش جزئیات محصول</router-link>
-       <button class="btn btn-primary">اضافه کردن به سبد خرید</button>
-   </div>
-  </div>
+    </div>
 </template>
 
 <script>
-
     export default {
         props:{
             products:Object
-        },
-        name:'SmallCard'
-       
+        }
     }
 </script>
 
-<style scoped>
-
-.button{
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 100%;
-}
+<style  scoped>
 .smallcard{
     display: flex;
     flex-direction:column ;
@@ -48,14 +32,7 @@
     object-fit: contain;
 }
 .smallcard>p{
-    text-align: justify;
+      text-align: justify;
     padding: 15px;
-}
-.router{
-    text-decoration: none;
-    color: #000;
-}
-.router:hover{
-    color: blue;
 }
 </style>
