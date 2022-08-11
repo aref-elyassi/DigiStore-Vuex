@@ -101,6 +101,7 @@ input{
 }
 .btn{
     width: 20rem;
+    margin-bottom: 5px;
 }
 textarea{
     width: 100%;

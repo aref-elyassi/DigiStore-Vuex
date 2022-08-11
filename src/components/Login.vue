@@ -31,6 +31,7 @@ display:flex;
 align-items:center;
 justify-content:center;
 
+
 }
 .form{
     width:40%;
@@ -39,40 +40,42 @@ justify-content:center;
     border:1px solid gray;
     border-radius:5px;
     height:40vh;
+   
 
 
 }
 .form>Form{
     padding:10px;
     display:flex;
-    flex-direction:column
+    flex-direction:column;
+   
 }
 .form>Form>button{
     margin-top:2rem;
-     background:#326789;
-     border:1px solid #1069ae;
+     background:#f15d03;
+     border:1px solid #f15d03;
      border-radius:5px;
-     color: #fff;
+     color: #000;
 }
 .form>Form>input{
     width:25rem;
     transition:.8s ease-in-out width;
     border:none;
     border-radius: 5px;
-    border-top:2px solid #42a7f5
+    border-top:2px solid #f15d03
 }
 .form>Form>input:focus{
- background:#326789;
- color: #fff;
+ background:#f15d03;
+ color: #f15d03;
 
 }
 .router{
     text-decoration:none;
-    color:#fff;
+    color:#000  ;
      margin-top:10px
 }
 .router:hover{
-    color:Blue;
+    color:#f15d03;
    
 }
 .signUp{

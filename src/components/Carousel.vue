@@ -63,7 +63,7 @@
   object-fit: contain;
 }
 .carousel{
-  border-bottom: 2px solid #000;
-   background: #78a6c8;
+
+   background: #3ebed7;
 }
 </style>

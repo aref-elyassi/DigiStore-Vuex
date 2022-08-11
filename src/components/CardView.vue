@@ -33,8 +33,8 @@
     border-radius: 5px;
     margin: 10px;
     width: 50%;
-    background: #f3f3f3;
-    box-shadow: 5px 5px 5px 0 rgb(230, 230, 230);
+    background: #3ebed7;
+    box-shadow: 2px 2px 5px 0 #3ebed7;
    
 }
 .router{

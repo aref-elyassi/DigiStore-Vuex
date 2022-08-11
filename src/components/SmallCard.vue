@@ -3,7 +3,7 @@
     <img :src="require(`@/assets/img/${products.image}`)" alt="">
     <h5>{{products.name}}</h5>
    <div class="button">   
-       <button class="btn btn-primary">اضافه کردن به سبد خرید</button>
+       <button class="btn">اضافه کردن به سبد خرید</button>
        <router-link class="router" :to="{name:'productId',params:{id:products.id}}">نمایش جزئیات محصول</router-link>
    </div>
   </div>
@@ -23,10 +23,13 @@
 <style scoped>
 .btn{
     margin-top:15px; 
-    width: 12rem;
-    height: 2rem;
+   
     text-align: center;
+    background: #3ebed7;
  
+}
+.btn:hover{
+    background: #f15d03;
 }
 .button{
     margin-bottom: 10px;
@@ -44,6 +47,7 @@
     border: 1px solid rgb(219, 219, 219);
     border-radius: 5px;
     margin: 10px;
+  
 }
 .smallcard>img{
     width: 15rem;

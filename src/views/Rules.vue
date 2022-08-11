@@ -10,12 +10,13 @@
                <h4>درخواست خود را برای ما ارسال کنید</h4>
                <Question/>
            </div>
-        </div>        
+        </div> 
     </div>
 </template>
 
 <script>
 import Question from '@/components/Question.vue';
+
     export default {
     name: "RulesComponent",
     components: { Question }

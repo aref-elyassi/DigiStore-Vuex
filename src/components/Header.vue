@@ -63,7 +63,7 @@ img:hover{
     flex-direction: column;
 }
 nav{
-    background: #e65c4f;
+    background: #f15d03;
     display: flex;
     justify-content: center;
     align-items: center;
