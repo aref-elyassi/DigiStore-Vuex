@@ -2,7 +2,7 @@
     <div class="category">
         <h1>دسته بندی محصولات</h1>
        <select class="form-select" @change="onChange($event)" v-model="value" aria-label="Default select example">         
-         
+            
             <option value="1">گوشی</option>
             <option value="2">ساعت هوشمند</option>
             <option value="3">یخچال</option>
