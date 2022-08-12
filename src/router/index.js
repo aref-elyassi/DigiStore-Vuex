@@ -7,6 +7,7 @@ import AllProduct from '@/views/AllProduct.vue'
 import TemplateProduct from '@/views/TemplateProduct.vue'
 import ShowProduct from '@/views/ShowProduct.vue'
 import Rules from '@/views/Rules.vue'
+import Category from '@/views/Category.vue'
 
 
 const routes = [
@@ -19,7 +20,8 @@ const routes = [
   {path:'',name:'product',component:AllProduct},
   {path:':id',name:'productId',component:ShowProduct}
  ]},
- {path:'/rules',name:'rules',component:Rules}
+ {path:'/rules',name:'rules',component:Rules},
+ {path:'/category',name:'category',component:Category}
 
 
 ]

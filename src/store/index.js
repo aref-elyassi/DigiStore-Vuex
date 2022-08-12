@@ -225,7 +225,10 @@ export default createStore({
     },
     getProductById: (state) => (id) => {
         return state.products.find(pr => pr.id == id)
-    } 
+    } ,
+    getProductsById:(state)=>(id)=>{
+        return state.Products.find(pr=>pr.pr_id==id)
+    }
   
   },
   mutations: {
