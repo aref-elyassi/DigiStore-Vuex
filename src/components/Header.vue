@@ -22,9 +22,7 @@
                     <li>
                         <router-link to="/login" class="router">ورود/ثبت نام</router-link>
                     </li>
-                     <li>
-                        <router-link to="/category" class="router">دسته بندی</router-link>
-                    </li>
+                
                 </ul>
               
                 <ul class="left-list">

@@ -1,17 +1,18 @@
 <template>
     <div class="category">
-       <select class="form-select" @change="onChange($event)" v-model="value" aria-label="Default select example">
-          <option  selected>انتخاب کنید</option>
+        <h1>دسته بندی محصولات</h1>
+       <select class="form-select" @change="onChange($event)" v-model="value" aria-label="Default select example">         
+         
             <option value="1">گوشی</option>
             <option value="2">ساعت هوشمند</option>
             <option value="3">یخچال</option>
             <option value="4"> تلویزیون</option>
             <option value="5">لباسشویی</option>
-        </select>
-       
+        </select>      
         <div class="largecard" v-for="pro in products" :key="pro.id">
             <div class="myProduct">
                 <h1>{{pro.title}}</h1>
+
                 <div class="smallcards">
                     <div  v-for="p in pro.product" :key="p.id">        
                         <SmallCard :products="p"/>
@@ -45,13 +46,21 @@ import SmallCard from '@/components/SmallCard.vue';
 </script>
 
 <style  scoped>
+
 .form-select{
     width: 15%;
     height: 3rem;
+    margin-right: 20px;
+    margin-top: 2rem;
 }
 .category{
     display: flex;
-    justify-content: space-between;
+   align-items: center;
+    flex-direction: column;
+    margin-top: 5rem;
+}
+.category>h1{
+    border-bottom: 2px solid #000;
 }
 .smallcards{
 display: flex;
@@ -63,10 +72,14 @@ display: flex;
     justify-content: space-evenly  ;
     flex-direction: column;
 }
+.myProduct>h1{
+    border-bottom:2px solid #000 ;
+}
 .largecard{
     width: 80%;
 display: flex;
 align-items: center;
 justify-content: center;
+margin-top: 5rem;
 }
 </style>

@@ -227,7 +227,8 @@ export default createStore({
         return state.products.find(pr => pr.id == id)
     } ,
     getProductsById:(state)=>(id)=>{
-        return state.Products.find(pr=>pr.pr_id==id)
+     return state.Products.find(pr=>pr.pr_id==id)
+       
     }
   
   },

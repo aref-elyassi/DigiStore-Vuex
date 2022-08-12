@@ -52,7 +52,11 @@
           <div class="left-footer">
            <img :src="require('@/assets/img/image2.png')" alt="">
           </div>
+
         </footer>
+    </div>
+    <div class="law">
+        <p>© تمامی حقوق محفوظ است ۱۳۸۵ - ۱۴۰۱</p>
     </div>
 </template>
 
@@ -98,5 +102,13 @@ img{
     display: flex;
     align-items: flex-start;
     justify-content: center;
+}
+.law{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: rgb(45, 45, 45);
+    color: #fff;
 }
 </style>

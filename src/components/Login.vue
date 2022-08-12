@@ -66,7 +66,7 @@ justify-content:center;
 }
 .form>Form>input:focus{
  background:#f15d03;
- color: #f15d03;
+ color: #000;
 
 }
 .router{

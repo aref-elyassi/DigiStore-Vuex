@@ -6,7 +6,7 @@
             <p>{{products.description}}</p>
             <p>قیمت:{{products.price}}تومان</p>
             <p>ساخت:{{products.country}}</p>
-            <router-link class="router" to="/products">برگشت به صفحه محصولات</router-link>
+          
     </div>
 </div>
 </template>
