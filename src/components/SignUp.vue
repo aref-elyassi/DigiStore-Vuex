@@ -52,8 +52,8 @@ margin-top:2rem
 }
 .form>Form>button{
     margin-top:2rem;
-     background:#326789;
-      border:1px solid #1069ae;
+     background:#f15d03;
+      border:1px solid #f15d03;
      border-radius:5px;
      color: #fff;
 }
@@ -62,12 +62,12 @@ margin-top:2rem
     transition:.8s ease-in-out width;
       border:none;
       border-radius: 5px;
-    border-top:2px solid #326789;
+    border-top:2px solid #f15d03;
        
 
 }
 .form>Form>input:focus{
- background:#326789;
+ background:#f15d03;
  color: #fff;
 
 }
