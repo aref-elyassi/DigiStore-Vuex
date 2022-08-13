@@ -425,6 +425,9 @@ representatives:[
     getProductsById:(state)=>(id)=>{
      return state.Products.find(pr=>pr.pr_id==id)
        
+    },
+    allRepresentatives(state){
+        return state.Representatives
     }
   
   },
