@@ -49,7 +49,7 @@
 
 <style  scoped>
 .carousel-caption>h3 ,.carousel-caption>p{
-  color:#000
+  color:#fff
 }
 
 .carousel-item{
@@ -64,6 +64,6 @@
 }
 .carousel{
 
-   background: #3ebed7;
+   background: #406882;
 }
 </style>

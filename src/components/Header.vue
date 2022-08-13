@@ -67,7 +67,7 @@ img:hover{
     flex-direction: column;
 }
 nav{
-    background: #f15d03;
+    background: #1A374D;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -102,7 +102,7 @@ li{
 }
 .router:hover{
   
-    color: rgb(54, 54, 54);
-    border-bottom: 2px solid #000;
+    color: rgb(255, 129, 129);
+    border-bottom: 2px solid rgb(255, 129, 129);
 }
 </style>

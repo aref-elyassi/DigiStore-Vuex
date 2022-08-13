@@ -32,8 +32,8 @@
     border-radius: 5px;
     margin: 10px;
     width: 50%;
-    background: #3ebed7;
-    box-shadow: 2px 2px 5px 0 #3ebed7;
+    background: #6998AB;
+    box-shadow: 2px 2px 5px 0 #6998AB;
    
 }
 

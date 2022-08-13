@@ -71,7 +71,7 @@
     display: flex;
     width: 100%;
    margin-top: 20px;
-    background: #00001c;
+    background: #406882;
     color: #fff;
 }
 footer{
