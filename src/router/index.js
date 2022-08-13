@@ -7,7 +7,7 @@ import AllProduct from '@/views/AllProduct.vue'
 import TemplateProduct from '@/views/TemplateProduct.vue'
 import ShowProduct from '@/views/ShowProduct.vue'
 import Rules from '@/views/Rules.vue'
-import Category from '@/views/Category.vue'
+
 import TemplateRep from '@/views/TemplateRep.vue'
 import AllRepresentatives from '@/views/AllRepresentatives.vue'
 import ShowRepresent from '@/views/ShowRepresent.vue'
@@ -22,7 +22,7 @@ const routes = [
   {path:':id',name:'productId',component:ShowProduct}
  ]},
  {path:'/rules',name:'rules',component:Rules},
- {path:'/category',name:'category',component:Category},
+
 
  {path:'/represntatives',name:'templaterep',component:TemplateRep,children:[
   {path:'',name:'representatives',component:AllRepresentatives},

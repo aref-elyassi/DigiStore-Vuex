@@ -1,20 +1,22 @@
 <template>
     <div>       
     <Carousel/>
-    <Category/>
+    <CategoryProduct/>
+    <RepresentCategory/>
  
     </div>
 </template>
 
 <script>
 import Carousel from '@/components/Carousel.vue';
-import Category from './Category.vue';
+import CategoryProduct from '@/components/ProductCategory.vue';
+import RepresentCategory from '@/components/RepresentCategory.vue';
 
 
 
     export default {
     name: "HomeC",
-    components: { Carousel, Category }
+    components: { Carousel, CategoryProduct, RepresentCategory }
 }
 </script>
 
