@@ -37,7 +37,7 @@ import SmallCard from '@/components/SmallCard.vue';
         var products = reactive({});
         function onChange(event) {
             products.value = computed(() => store.getters.getProductsById(event.target.value));
-            console.log(products.value.product);
+            console.log(products.value.product,products.value);
         }
         return { onChange, products };
     },
