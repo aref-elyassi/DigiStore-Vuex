@@ -5,6 +5,7 @@
             <img :src="require(`@/assets/img/${represent.image}`)" alt=""/>
              <h3>آدرس:{{represent.address}}</h3>
              <p>{{represent.description}}</p>
+             <p>شماره تلفن:{{represent.phone}}</p>
         </div>
     </div>
 </template>

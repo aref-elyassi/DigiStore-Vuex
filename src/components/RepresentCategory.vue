@@ -1,8 +1,7 @@
 <template>
     <div class="category">
         <h1>دسته بندی نمایندگی ها</h1>
-       <select class="form-select" @change="onChange($event)" v-model="value" aria-label="Default select example">         
-            
+       <select class="form-select" @change="onChange($event)" v-model="value" aria-label="Default select example">                     
             <option value="1">تهران</option>
             <option value="2">اصفهان</option>
             <option value="3">شیراز</option>
@@ -54,7 +53,9 @@ import SmallRep from './SmallRep.vue';
     display: flex;
    align-items: center;
     flex-direction: column;
-    margin-top: 5rem;
+    margin-top: 2rem;
+      
+        padding: 20px;
 }
 .category>h1{
     border-bottom: 2px solid #000;

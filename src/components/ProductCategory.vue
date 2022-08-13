@@ -57,7 +57,9 @@ import SmallCard from '@/components/SmallCard.vue';
     display: flex;
    align-items: center;
     flex-direction: column;
-    margin-top: 5rem;
+    margin-top: 2rem;
+    
+    padding: 20px;
 }
 .category>h1{
     border-bottom: 2px solid #000;
