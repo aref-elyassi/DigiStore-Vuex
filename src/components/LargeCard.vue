@@ -11,7 +11,7 @@
                     <h5>{{p.name}}</h5>
                     <div class="button">   
                         <router-link class="router" :to="{name:'productId',params:{id:p.id}}">نمایش جزئیات محصول</router-link>
-                        <button @click="addToCard(p)">اضافه کردن به سبد خرید</button>
+                        <button @click="addToCart(p)">اضافه کردن به سبد خرید</button>
                     </div>
                 </div>
             </div>
@@ -30,10 +30,10 @@ import { computed } from 'vue'
     setup() {
         const store = useStore();
         const product = computed(() => store.getters.allProducts);
-         function addToCard(p){
-             store.dispatch('addToCard',p)
+         function addToCart(p){
+             store.dispatch('addToCart',p)
          }   
-             return { product,addToCard };
+             return { product,addToCart };
     },
     
 }

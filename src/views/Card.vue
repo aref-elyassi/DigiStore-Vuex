@@ -1,22 +1,22 @@
 <template>
- <div class="container">
+  <div class="container">
     <div class="row mt-5">
       <div v-if="cartItems.length == 0" class="col-md-12 text-center">
         <div>
           <i class="bi bi-basket-fill" style="font-size: 100px"></i>
         </div>
-        <h3 class="text-bold">Cart Is Empty</h3>
-        <router-link class="btn btn-outline-dark mt-3" to="/products">Products</router-link>
+        <h3 class="text-bold">سبد خرید خالی است</h3>
+        <router-link class="btn btn-outline-dark mt-3" to="/products">محصولات</router-link>
       </div>
       <div v-else class="col-lg-12 pl-3 pt-3">
         <table class="table table-hover border bg-white">
           <thead>
             <tr>
-              <th>Product</th>
-              <th>Price</th>
-              <th style="width: 10%">Quantity</th>
-              <th>Subtotal</th>
-              <th>Action</th>
+              <th>محصول</th>
+              <th>قیمت</th>
+              <th style="width: 10%">تعداد</th>
+              <th>مجموع</th>
+              <th>حذف</th>
             </tr>
           </thead>
           <tbody>
@@ -56,7 +56,7 @@
                   @click="removeFromCart(item.id)"
                   class="btn btn-danger btn-sm"
                 >
-                  delete
+                  حذف
                 </button>
               </td>
             </tr>
@@ -65,15 +65,15 @@
             <tr>
               <td>
                 <button @click="clearCart" class="btn btn-dark">
-                  Clear Cart
+                  حذف کل سبد خرید
                 </button>
               </td>
               <td colspan="2" class="hidden-xs"></td>
               <td class="hidden-xs text-center" style="width: 15%">
-                <strong>Total : {{ cartTotalAmount }}</strong>
+                <strong>مجموع : {{ cartTotalAmount }}</strong>
               </td>
               <td>
-                <a href="#" class="btn btn-success btn-block">Checkout</a>
+                <a href="#" class="btn btn-success btn-block">بررسی سبد</a>
               </td>
             </tr>
           </tfoot>
@@ -84,11 +84,40 @@
 </template>
 
 <script>
-    export default {
-        name:'CardComponent'
+import { computed } from "vue";
+import { useStore } from "vuex";
+
+export default {
+  name:'CardComponent',
+  setup() {
+    const store = useStore();
+    const cartItems = computed(() => store.getters.allItems);
+    const cartTotalAmount = computed(() => store.getters.totalAmount);
+
+    function increment(id) {
+      store.dispatch("increment", id);
     }
+
+    function decrement(id) {
+      store.dispatch("decrement", id);
+    }
+
+    function removeFromCart(id) {
+      store.dispatch("remove", id);
+    }
+
+    function clearCart() {
+      store.dispatch("clear");
+    }
+
+    return {
+      cartItems,
+      cartTotalAmount,
+      increment,
+      decrement,
+      removeFromCart,
+      clearCart,
+    };
+  },
+};
 </script>
-
-<style lang="scss" scoped>
-
-</style>

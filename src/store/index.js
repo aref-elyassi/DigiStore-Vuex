@@ -1,12 +1,15 @@
 import { createStore } from 'vuex'
 import Swal from 'sweetalert2'
 
-function updateLocalStorage(card) {
-    localStorage.setItem('card', JSON.stringify(card))
+
+function updateLocalStorage(cart) {
+    localStorage.setItem('cart', JSON.stringify(cart))
 }
 
 export default createStore({
   state: {
+    cart: localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [],
+
     Products:[
       {
           pr_id:1,
@@ -120,6 +123,7 @@ export default createStore({
           ]
       }
   ],
+
   products:[
     {
         id:11,
@@ -223,6 +227,7 @@ export default createStore({
         colors:['زرد','آبی'],
            },
 ],
+
 Representatives:[
     {
         re_id:1,
@@ -420,6 +425,7 @@ Representatives:[
     }
 
 ],
+
 representatives:[
     {
         id:11,
@@ -573,7 +579,7 @@ representatives:[
     },
     
 ],
-card: localStorage.getItem('card') ? JSON.parse(localStorage.getItem('card')) : []
+
   },
   getters: {
     allProducts(state){
@@ -595,29 +601,60 @@ card: localStorage.getItem('card') ? JSON.parse(localStorage.getItem('card')) : 
     getRepresentsById:(state)=>(id)=>{
         return state.Representatives.find(pr=>pr.re_id==id)
     },
-    totalAmount(state){
-        return state.card.length
+    count(state) {
+        return state.cart.length
+    },
+    allItems(state) {
+        return state.cart
+    },
+    totalAmount(state) {
+        return state.cart.reduce((total, p) => {
+            return total + p.price * p.quantity
+        }, 0)
     }
   
   },
   mutations: {
-    addToCard(state,product){
-        const item=state.card.find(p=>p.id==product.id)
-            if(!item){
-                state.card.push({
-                    ...product,
-                    quantity:1
-                })
+    add(state, product) {
+        const item = state.cart.find(p => p.id == product.id)
+        if (!item) {
+            state.cart.push({
+                ...product,
+                quantity: 1
+            })
+        } else {
+            item.quantity++
+        }
+        updateLocalStorage(state.cart)
+    },
+    increment(state, id) {
+        const item = state.cart.find(p => p.id == id)
+        if (item) {
+            item.quantity++
+        }
+        updateLocalStorage(state.cart)
+    },
+    decrement(state, id) {
+        const item = state.cart.find(p => p.id == id)
+        if (item) {
+            if (item.quantity > 1) {
+                item.quantity--
             }
-            else{
-                item.quantity++
-            }
-            updateLocalStorage(state.card)
+        }
+        updateLocalStorage(state.cart)
+    },
+    remove(state, id) {
+        state.cart = state.cart.filter(cart => cart.id != id)
+        updateLocalStorage(state.cart)
+    },
+    clear(state) {
+        state.cart = []
+        updateLocalStorage(state.cart)
     }
   },
   actions: {
-    addToCard({commit},product){
-        commit('addToCard',product);
+    addToCart({ commit }, product) {
+        commit('add', product);
         Swal.fire({
             title: "محصول اضافه شد",
             icon: "success",
@@ -628,8 +665,55 @@ card: localStorage.getItem('card') ? JSON.parse(localStorage.getItem('card')) : 
             position: 'top',
         });
     },
-
-  },
+    increment({ commit }, id) {
+        commit('increment', id);
+        Swal.fire({
+            title: "محصول اضافه شد",
+            icon: "success",
+            showConfirmButton: false,
+            timerProgressBar: true,
+            timer: 3000,
+            toast: true,
+            position: 'top',
+        });
+    },
+    decrement({ commit }, id) {
+        commit('decrement', id);
+        Swal.fire({
+            title: "محصول کم شد",
+            icon: "success",
+            showConfirmButton: false,
+            timerProgressBar: true,
+            timer: 3000,
+            toast: true,
+            position: 'top',
+        });
+    },
+    remove({ commit }, id) {
+        commit('remove', id);
+        Swal.fire({
+            title: "محصول حذف شد",
+            icon: "warning",
+            showConfirmButton: false,
+            timerProgressBar: true,
+            timer: 3000,
+            toast: true,
+            position: 'top',
+        });
+    },
+    clear({ commit }) {
+        commit('clear');
+        Swal.fire({
+            title: "سبد خرید پاک شد",
+            icon: "warning",
+            showConfirmButton: false,
+            timerProgressBar: true,
+            timer: 3000,
+            toast: true,
+            position: 'top',
+        });
+    }
+},
   modules: {
   }
 })

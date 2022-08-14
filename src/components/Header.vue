@@ -47,7 +47,7 @@ import { computed } from '@vue/reactivity';
         name:'HeaderComponent',
         setup() {
             const store=useStore()
-            const totalCard=computed(()=>store.getters.totalAmount)
+            const totalCard=computed(()=>store.getters.count)
             return{totalCard}
         }
     }

@@ -21,7 +21,7 @@
                     <h5>{{p.name}}</h5>
                     <div class="button">   
                         <router-link class="router" :to="{name:'productId',params:{id:p.id}}">نمایش جزئیات محصول</router-link>
-                        <button @click="addToCard(p)">اضافه کردن به سبد خرید</button>
+                        <button @click="addToCart(p)">اضافه کردن به سبد خرید</button>
                     </div>
                 </div>
             </div>
@@ -47,10 +47,10 @@ import { useStore } from 'vuex';
             product.value = computed(() => store.getters.getProductsById(event.target.value));
             console.log(product.value.product,product.value);
         }
-         function addToCard(p){
-             store.dispatch('addToCard',p)
+         function addToCart(p){
+             store.dispatch('addToCart',p)
          }   
-        return { onChange, product,addToCard };
+        return { onChange, product,addToCart };
     },
    
 }
