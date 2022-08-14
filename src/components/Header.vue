@@ -30,9 +30,9 @@
               
                 <ul class="left-list">
                     <li>
-                        <router-link to="/" class="router">
+                        <router-link to="/card" class="router">
                             <span>سبدخرید</span>
-                          <span class="badge rounded-pill bg-light me-1">1</span>
+                          <span class="badge rounded-pill bg-light me-1">{{totalCard}}</span>
                         </router-link>
                     </li>
                 </ul>
@@ -41,8 +41,15 @@
 </template>
 
 <script>
+import { useStore } from 'vuex';
+import { computed } from '@vue/reactivity';
     export default {
-        name:'HeaderComponent'
+        name:'HeaderComponent',
+        setup() {
+            const store=useStore()
+            const totalCard=computed(()=>store.getters.totalAmount)
+            return{totalCard}
+        }
     }
 </script>
 

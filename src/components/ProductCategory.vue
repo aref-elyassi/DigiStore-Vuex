@@ -9,17 +9,25 @@
             <option value="4"> تلویزیون</option>
             <option value="5">لباسشویی</option>
         </select>      
-        <div class="largecard" v-for="pro in products" :key="pro.id">
-            <div class="myProduct">
-                <h1>{{pro.title}}</h1>
+        <div class="largecard" v-for="pr in product" :key="pr.id">
+    <div class="myProduct">
 
-                <div class="smallcards">
-                    <div  v-for="p in pro.product" :key="p.id">        
-                        <SmallCard :products="p"/>
+        <h1>{{pr.title}}</h1>
+        <div class="smallcards">
+            <div  v-for="p in pr.product" :key="p.id">        
+                <div class="smallcard">
+                    <img :src="require(`@/assets/img/${p.image}`)" alt="">
+                    <hr>
+                    <h5>{{p.name}}</h5>
+                    <div class="button">   
+                        <router-link class="router" :to="{name:'productId',params:{id:p.id}}">نمایش جزئیات محصول</router-link>
+                        <button @click="addToCard(p)">اضافه کردن به سبد خرید</button>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+    </div>
     </div>
 
 </template>
@@ -27,26 +35,88 @@
 <script>
 import { computed,reactive } from 'vue';
 import { useStore } from 'vuex';
-import SmallCard from '@/components/SmallCard.vue';
+
 
 
     export default {
     name: "CategoryComponent",
     setup() {
         const store = useStore();
-        var products = reactive({});
+        var product = reactive({});
         function onChange(event) {
-            products.value = computed(() => store.getters.getProductsById(event.target.value));
-            console.log(products.value.product,products.value);
+            product.value = computed(() => store.getters.getProductsById(event.target.value));
+            console.log(product.value.product,product.value);
         }
-        return { onChange, products };
+         function addToCard(p){
+             store.dispatch('addToCard',p)
+         }   
+        return { onChange, product,addToCard };
     },
-    components: { SmallCard }
+   
 }
 </script>
 
 <style  scoped>
+.smallcards{
+display: flex;
+}
 
+.myProduct{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly  ;
+    flex-direction: column;
+}
+button{
+    margin-top:15px;   
+    text-align: center;
+    background: #3ebed7;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    height: 2rem;
+ 
+}
+button:hover{
+    background: #f15d03;
+}
+.button{
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+}
+.smallcard{
+    display: flex;
+    flex-direction:column ;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 5px;
+    margin: 10px;
+  
+}
+.smallcard>img{
+    width: 15rem;
+    height: 15rem;
+    object-fit: contain;
+   
+}
+.smallcard>p{
+    text-align: justify;
+    padding: 15px;
+}
+.router{
+    text-decoration: none;
+    color: #000;
+    margin-top: 20px;
+    border-bottom: 2px solid #000;
+}
+.router:hover{
+    color: rgb(255, 0, 55);
+     border-bottom: 2px solid rgb(255, 0, 55);;
+}
 .form-select{
     width: 15%;
     height: 3rem;

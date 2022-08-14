@@ -1,4 +1,9 @@
 import { createStore } from 'vuex'
+import Swal from 'sweetalert2'
+
+function updateLocalStorage(card) {
+    localStorage.setItem('card', JSON.stringify(card))
+}
 
 export default createStore({
   state: {
@@ -567,7 +572,8 @@ representatives:[
         phone:'0123456789'
     },
     
-]
+],
+card: localStorage.getItem('card') ? JSON.parse(localStorage.getItem('card')) : []
   },
   getters: {
     allProducts(state){
@@ -588,12 +594,41 @@ representatives:[
     } ,
     getRepresentsById:(state)=>(id)=>{
         return state.Representatives.find(pr=>pr.re_id==id)
+    },
+    totalAmount(state){
+        return state.card.length
     }
   
   },
   mutations: {
+    addToCard(state,product){
+        const item=state.card.find(p=>p.id==product.id)
+            if(!item){
+                state.card.push({
+                    ...product,
+                    quantity:1
+                })
+            }
+            else{
+                item.quantity++
+            }
+            updateLocalStorage(state.card)
+    }
   },
   actions: {
+    addToCard({commit},product){
+        commit('addToCard',product);
+        Swal.fire({
+            title: "محصول اضافه شد",
+            icon: "success",
+            showConfirmButton: false,
+            timerProgressBar: true,
+            timer: 3000,
+            toast: true,
+            position: 'top',
+        });
+    },
+
   },
   modules: {
   }

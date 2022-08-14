@@ -5,7 +5,7 @@
     <h5>{{products.name}}</h5>
    <div class="button">   
        <router-link class="router" :to="{name:'productId',params:{id:products.id}}">نمایش جزئیات محصول</router-link>
-       <button>اضافه کردن به سبد خرید</button>
+       <button >اضافه کردن به سبد خرید</button>
    </div>
   </div>
 </template>
@@ -16,6 +16,7 @@
         props:{
             products:Object
         },
+       
         name:'SmallCard'
        
     }
