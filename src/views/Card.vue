@@ -24,13 +24,11 @@
               <td class="align-middle">
                 <div class="row">
                   <div class="col-lg-2">
-                    <img :src="item.image" alt="..." class="img-fluid" />
+                    <img :src="require(`@/assets/img/${item.image}`)" alt="..." class="img-fluid" />
                   </div>
                   <div class="col-lg-10">
                     <h5>{{ item.name }}</h5>
-                    <p>
-                      {{ item.description }}
-                    </p>
+                  
                   </div>
                 </div>
               </td>
