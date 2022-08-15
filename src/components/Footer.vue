@@ -18,8 +18,8 @@
                     </router-link>
                 </li>
                  <li>
-                    <router-link class="router" to="/login">
-                        <p>ورود</p>
+                    <router-link class="router" to="/represntatives">
+                        <p>نمایندگی ها</p>
                     </router-link>
                 </li>
             </ul>

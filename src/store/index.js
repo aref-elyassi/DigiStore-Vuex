@@ -640,6 +640,7 @@ representatives:[
             if (item.quantity > 1) {
                 item.quantity--
             }
+            
         }
         updateLocalStorage(state.cart)
     },

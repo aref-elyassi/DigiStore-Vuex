@@ -26,7 +26,7 @@
                   <div class="col-lg-2">
                     <img :src="require(`@/assets/img/${item.image}`)" alt="..." class="img-fluid" />
                   </div>
-                  <div class="col-lg-10">
+                  <div class="col-lg-10 nameProduct">
                     <h5>{{ item.name }}</h5>
                   
                   </div>
@@ -59,8 +59,8 @@
               </td>
             </tr>
           </tbody>
-          <tfoot>
-            <tr>
+          <tfoot >
+            <tr >
               <td>
                 <button @click="clearCart" class="btn btn-dark">
                   حذف کل سبد خرید
@@ -70,9 +70,7 @@
               <td class="hidden-xs text-center" style="width: 15%">
                 <strong>مجموع : {{ cartTotalAmount }}</strong>
               </td>
-              <td>
-                <a href="#" class="btn btn-success btn-block">بررسی سبد</a>
-              </td>
+             
             </tr>
           </tfoot>
         </table>
@@ -119,3 +117,13 @@ export default {
   },
 };
 </script>
+
+<style>
+
+.nameProduct{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+</style>
